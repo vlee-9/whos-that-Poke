@@ -57,6 +57,7 @@ function App() {
         </div>
       </div>
       < button className="button-rand" onClick={getRandomPoke}>Random</button>
+      <a href='./gamepage.html'><button>Game</button></a>
     </>
   )
 }
