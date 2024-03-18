@@ -1,31 +1,33 @@
 body {
     width: 100%;
     height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #ffb9f3;
 }
 
+body,
+.gameset,
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .gameset {
-    width: 450px;
-    height: 350px;
+    width: 750px;
+    height: 555px;
     padding: 20px 20px 45px;
-    margin: 0 auto;
     background-color: #cfbfdf;
     color: #8080a0;
     border-radius: 20px;
     border: #a0a0c0 5px solid;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     box-shadow: 1px 3px 12px #c070c0;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.gameset>img,
-.gameset>h1 {
-    width: 50%;
+.gameset>img {
+    width: 33%;
     text-align: center;
 }
 
@@ -33,8 +35,70 @@ body {
     filter: brightness(0);
 }
 
-.gameset>button{
-    width: 80px;
+.choices {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.pokeBtn {
+    width: 280px;
+    height: 50px;
     padding: 4px 8px;
-    margin: 0 5px;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.nextBtn {
+    width: 570px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.progressbar {
+    width: 100%;
+    height: 7px;
+    margin-top: auto;
+    border: solid #000 1px;
+}
+
+.progress1 {
+    background: linear-gradient(90deg, #5bf 10%, #00000000 10%)
+}
+
+.progress2 {
+    background: linear-gradient(90deg, #5bf 20%, #00000000 20%)
+}
+
+.progress3 {
+    background: linear-gradient(90deg, #5bf 30%, #00000000 30%)
+}
+
+.progress4 {
+    background: linear-gradient(90deg, #5bf 40%, #00000000 40%)
+}
+
+.progress5 {
+    background: linear-gradient(90deg, #5bf 50%, #00000000 50%)
+}
+
+.progress6 {
+    background: linear-gradient(90deg, #5bf 60%, #00000000 60%)
+}
+
+.progress7 {
+    background: linear-gradient(90deg, #5bf 70%, #00000000 70%)
+}
+
+.progress8 {
+    background: linear-gradient(90deg, #5bf 80%, #00000000 80%)
+}
+
+.progress9 {
+    background: linear-gradient(90deg, #5bf 90%, #00000000 90%)
+}
+
+.progress10 {
+    background-color: #5bf
 }
