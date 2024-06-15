@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { pokeG1 } from './Gen1Data'
+import { pokeG1 } from './generationData/Gen1Data'
 import './css/gameset.css'
 
 export default function GameSet() {
@@ -45,17 +45,17 @@ export default function GameSet() {
                 break;
         }
     }
-    console.log(settings.exp)
+    // console.log(settings.exp)
     return (
         <div className='gameset'>
             {active && <img className={answer ? '' : 'hiddenPoke'} src={hiddenPoke.sprites.front_default} alt="" />}
             {answer ? <h1>{`It's ${hiddenPoke.name.slice(0, 1).toUpperCase() + hiddenPoke.name.slice(1)}!`}</h1> : <h1>Whos That Pokémon?</h1>}
             <br />
             <div className='choices'>
-                {active && <button className='pokeBtn' onClick={() => checkAnswer(pokeArr[0].name)}>{pokeArr[0].name}</button>}
-                {active && <button className='pokeBtn' onClick={() => checkAnswer(pokeArr[1].name)}>{pokeArr[1].name}</button>}
-                {active && <button className='pokeBtn' onClick={() => checkAnswer(pokeArr[2].name)}>{pokeArr[2].name}</button>}
-                {active && <button className='pokeBtn' onClick={() => checkAnswer(pokeArr[3].name)}>{pokeArr[3].name}</button>}
+                {!answer && active && <button className='pokeBtn' onClick={() => checkAnswer(pokeArr[0].name)}>{pokeArr[0].name}</button>}
+                {!answer && active && <button className='pokeBtn' onClick={() => checkAnswer(pokeArr[1].name)}>{pokeArr[1].name}</button>}
+                {!answer && active && <button className='pokeBtn' onClick={() => checkAnswer(pokeArr[2].name)}>{pokeArr[2].name}</button>}
+                {!answer && active && <button className='pokeBtn' onClick={() => checkAnswer(pokeArr[3].name)}>{pokeArr[3].name}</button>}
             </div>
             {!active && <button onClick={loadPokemon}>Start!</button>}
             <br />
